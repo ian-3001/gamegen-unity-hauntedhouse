@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1ca63a91b17724bbd99c8fa67e0180, type: 3}
+  m_Name: MP_Horror_Wall
+  m_EditorClassIdentifier: Unity.ProBuilder.Editor::UnityEditor.ProBuilder.MaterialPalette
+  array:
+  - {fileID: 2100000, guid: 5cbfdc69abc564d86a8f911a86a98c93, type: 2}
+  - {fileID: 2100000, guid: 5ae2430f8d23a4288b81ce3c138414b9, type: 2}
+  - {fileID: 2100000, guid: c73f26d8093b148b5b1abcf4ccb60784, type: 2}
+  - {fileID: 2100000, guid: b1361d56ba94a4d8380a8852bc50793c, type: 2}
+  - {fileID: 2100000, guid: faca41aecb43b4d4c856ace18867f5cd, type: 2}
+  - {fileID: 2100000, guid: 02436a5cba8e749ee9b4c8844d8b982e, type: 2}
+  - {fileID: 2100000, guid: d39e42b5b93d24d47bcf9fddeb447af0, type: 2}
+  - {fileID: 2100000, guid: 376769f7d36644e69a3b9243024d29cd, type: 2}
+  - {fileID: 2100000, guid: 4f31dc2beef9f4f8c97fbe5ea622e1a1, type: 2}
+  - {fileID: 2100000, guid: 1f88957d9f12f4b5db1ae65fe4536344, type: 2}
+  - {fileID: 2100000, guid: 4b2aff225b2684291b9e6e8616876471, type: 2}
+  - {fileID: 2100000, guid: a4f95c45eefbc4dc89140df71af93d07, type: 2}
+  - {fileID: 2100000, guid: 0c6790c3deac34785adf3392703acb8d, type: 2}
+  - {fileID: 2100000, guid: 02b7a4421c8d74f3f96994d9cfa4195e, type: 2}
