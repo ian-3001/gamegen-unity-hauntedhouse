@@ -6,9 +6,9 @@ public class PrefabPrepUtility : EditorWindow
 {
     public enum Pivot
     {
-        Root,
-        //Center,
         BottomCenter,
+        Center,
+        Root,
     }
     
     //private enum PivotSource { Renderer, Collider }
@@ -70,7 +70,7 @@ public class PrefabPrepUtility : EditorWindow
         Undo.RecordObject(rootObj, "Added Parent Pivot");
     }
 
-
+    
 
     private Vector3 GetPivot(GameObject rootObj, Pivot pivot)
     {
@@ -78,19 +78,47 @@ public class PrefabPrepUtility : EditorWindow
 
         if (pivot == Pivot.Root) { return result; }
 
+        Vector3 center = GetCenter(rootObj);
+
+        if (pivot == Pivot.Center)
+        {
+            return center;
+        }
 
         if (pivot == Pivot.BottomCenter)
         {
-            result = GetBottomPoint(rootObj);
+            result = GetBottomPoint(rootObj, center);
         }
 
         return result;
     }
 
 
-    private Vector3 GetBottomPoint(GameObject rootObj)
+    private Vector3 GetCenter(GameObject rootObj)
     {
         Vector3 result = rootObj.transform.position;
+        Renderer[] renderers = rootObj.GetComponentsInChildren<Renderer>();
+
+        if (renderers.Length <= 0)
+        {
+            Debug.LogWarning($"No Renderers Found on: {rootObj}");
+            return result;
+        }
+
+        Bounds finalBounds = renderers[0].bounds;
+        
+        for (int i = 1; i < renderers.Length; i++)
+        {
+            Renderer renderer = renderers[i];
+            finalBounds.Encapsulate(renderer.bounds);
+        }
+
+        return finalBounds.center;
+    }
+    
+    private Vector3 GetBottomPoint(GameObject rootObj, Vector3 center)
+    {
+        Vector3 result = center;
         Renderer[] renderers = rootObj.GetComponentsInChildren<Renderer>();
 
         if (renderers.Length <= 0)
