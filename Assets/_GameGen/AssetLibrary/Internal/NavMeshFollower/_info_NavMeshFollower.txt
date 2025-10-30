@@ -1,0 +1,12 @@
+To use the NavMeshFollower, you need a NavMeshSurface in your level.
+Right-click in your Hierarchy and choose AI/NavMeshSurface
+Or on an Empty GameObject, at the NavMeshSurface component
+
+On the NavMeshSurface Component, Click "Bake"
+
+Then on the NavMeshFollower prefab, assign the player to the "Follow" field.
+
+
+
+
+LAST UPDATED: 2025-10-30
